@@ -8,7 +8,7 @@ import time
 GRID_W = 12
 GRID_H = 12
 CELL = 32
-TIME_LIMIT = 25  # seconds
+TIME_LIMIT =30
 
 PLAYER_COLOR = (50, 220, 90)
 COIN_COLOR = (255, 215, 0)
