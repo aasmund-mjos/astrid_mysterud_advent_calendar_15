@@ -247,7 +247,7 @@ def render():
 
 def main():
     st.set_page_config(page_title="Christmas Calendar", page_icon="assets/coin.png", layout="centered")
-    st.title("Advent Calendar Day 15")
+    st.title("Astrids Online Advent Calendar")
     st.caption("""Oh Noo! Avoid getting a B, whilst you collect all the A's! You have to be quick though, as time is ticking!
 I'm sorry, when I uploaded the app, it got very laggy, so don't spam buttons please :)""")
 
