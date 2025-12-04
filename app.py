@@ -157,24 +157,6 @@ def _format_time(seconds: float) -> str:
     s = int(seconds % 60)
     return f"{m:02d}:{s:02d}"
 
-
-def handle_key():
-    raw = st.session_state.get("keybuf", "")
-    if not raw:
-        return
-    ch = raw.strip().lower()
-    if ch == "w":
-        move(0, -1)
-    elif ch == "s":
-        move(0, 1)
-    elif ch == "a":
-        move(-1, 0)
-    elif ch == "d":
-        move(1, 0)
-    # clear buffer to accept next key
-    st.session_state.keybuf = ""
-
-
 def render():
     img = Image.new("RGB", (GRID_W * CELL, GRID_H * CELL), BG_COLOR)
     draw = ImageDraw.Draw(img)
@@ -262,7 +244,7 @@ I'm sorry, when I uploaded the app, it got very laggy, so don't spam buttons ple
         if callable(ear):
             ear(interval=300, key="countdown_refresh", limit=100000)
 
-    # Countdown timer (20s) with auto-fail on timeout
+    # Countdown timer (30s) with auto-fail on timeout
     now = time.time()
     if st.session_state.started and st.session_state.start_time is not None:
         end_ref = st.session_state.end_time or (st.session_state.start_time + TIME_LIMIT)
@@ -331,4 +313,3 @@ I'm sorry, when I uploaded the app, it got very laggy, so don't spam buttons ple
 
 if __name__ == "__main__":
     main()
-
