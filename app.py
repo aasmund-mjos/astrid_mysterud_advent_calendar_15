@@ -8,7 +8,7 @@ import time
 GRID_W = 12
 GRID_H = 12
 CELL = 32
-TIME_LIMIT = 20  # seconds
+TIME_LIMIT = 25  # seconds
 
 PLAYER_COLOR = (50, 220, 90)
 COIN_COLOR = (255, 215, 0)
@@ -248,7 +248,8 @@ def render():
 def main():
     st.set_page_config(page_title="Christmas Calendar", page_icon="assets/coin.png", layout="centered")
     st.title("Advent Calendar Day 15")
-    st.caption("Oh Noo! Avoid getting a B, whilst you collect all the A's! You have to be quick though, as time is ticking!")
+    st.caption("""Oh Noo! Avoid getting a B, whilst you collect all the A's! You have to be quick though, as time is ticking!
+I'm sorry, when I uploaded the app, it got very laggy, so don't spam buttons please :)""")
 
     init_state()
 
